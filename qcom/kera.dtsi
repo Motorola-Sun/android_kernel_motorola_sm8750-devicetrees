@@ -2930,7 +2930,8 @@
 		clock-names = "ref_clk_src",
 			"ref_aux_clk", "qref_clk",
 			"rx_sym0_mux_clk", "rx_sym1_mux_clk", "tx_sym0_mux_clk",
-			"rx_sym0_phy_clk", "rx_sym1_phy_clk", "tx_sym0_phy_clk";
+			"rx_sym0_phy_clk", "rx_sym1_phy_clk", "tx_sym0_phy_clk",
+			"h8_xo_clk";
 		clocks = <&rpmhcc RPMH_CXO_PAD_CLK>,
 			<&gcc GCC_UFS_PHY_PHY_AUX_CLK>,
 			<&tcsrcc TCSR_UFS_CLKREF_EN>,
@@ -2939,7 +2940,8 @@
 			<&gcc GCC_UFS_PHY_TX_SYMBOL_0_CLK_SRC>,
 			<&ufs_phy_rx_symbol_0_clk>,
 			<&ufs_phy_rx_symbol_1_clk>,
-			<&ufs_phy_tx_symbol_0_clk>;
+			<&ufs_phy_tx_symbol_0_clk>,
+			<&rpmhcc RPMH_CXO_CLK>;
 		resets = <&ufshc_mem 0>;
 		status = "disabled";
 	};
